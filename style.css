@@ -1,0 +1,384 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+a {
+      text-decoration: none;
+}
+img {
+      max-width: 100%;
+}
+ul ol{
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+}
+li {
+      list-style: none;
+}
+.wrapper {
+      max-width: 1100px;
+      margin: 0 auto 100px;
+      padding: 0 4%;
+      text-align: center;
+}
+*{
+      box-sizing: inherit;
+}
+
+
+
+/**********************************
+*ヘッダーゾーン
+**********************************/
+#header{
+      height: 98px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin: 0 20px auto 0;
+}
+.nav{
+      align-items: center; 
+}
+.nav ul{
+      display: flex;
+      float: left;
+}
+.nav li{
+      text-align: center;
+      margin-left: 32px;
+      border-right: solid 1 #000;
+}
+.nav-item span{
+      font-size: 0.625rem;
+      display: block; 
+      align-items: center; 
+      text-align: center;
+      font-weight: 600;
+}
+
+
+/**********************************
+*VISUALゾーン
+**********************************/
+.visual{
+	width: 100%;
+	height: 60vh;
+	display: flex;
+	margin-bottom: 100px;
+	
+}
+.visual::after{
+	position: absolute;
+	height: 60vh;
+	content: "";
+	top: 10.5%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: black;
+	margin: 0;
+	opacity: 0.45;
+}
+.slider{
+	max-width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.slick-track{
+	height: 60vh;
+}
+.slider {
+      visibility: hidden;
+}
+.slider.slick-initialized {
+      visibility: visible;
+}
+
+.visual_text{
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	max-width: 1130px;
+	color: #5fb1de;
+	font-size: 3.5rem;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+	z-index: 9999;
+
+}
+.visual_text p{
+	text-align: center;
+}
+.visual_text span{
+	font-size: 2.625rem;
+	color: #fff;
+}
+.visual_dis{
+	font-size: 4.125rem;
+	color: #fff;
+}
+
+/**********************************
+*共通ゾーン
+**********************************/
+#main_inner{
+	max-width: 1164px;
+	margin: 0 auto;
+}
+.section_title h2{
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin: 0 auto;
+}
+.section_title p{
+	font-size: 0.812;
+	margin: 9px auto 80px;
+}
+.section_title p::before{
+	position: absolute;
+	content: '';
+	bottom: 50px; /*下線の上下の位置*/
+	left: 50%;
+	width: 100px; /*下線の幅*/
+	height: 2px; /*下線の太さ*/
+	transform: translate(-50%); /*位置の調整*/
+	background-color: #209ddb; /*下線の色*/
+	
+}
+.section_dis{
+	font-size: 1rem;
+}
+
+/**********************************
+*PURPOSEゾーン
+**********************************/
+.purpose_list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.purpose_list ul{
+	max-width: 1164px;
+}
+.purpose_list li{
+	width: 23%;
+	margin: 0 20px 40px 0;
+}
+.purpose_list li h3{
+	font-size: 1rem;
+	margin-bottom: 10px;
+}
+.purpose_list li p{
+	font-size: 0.875rem;
+	margin-bottom: 10px;
+}
+
+/**********************************
+*TYPERゾーン
+**********************************/
+.type_list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+.type_list ul{
+	max-width: 1164px;
+}
+.type_list li{
+	width: 23%;
+	height: 23vh;
+	margin: 0 20px 40px 0;
+	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%) !important;
+	border-radius: 10px;
+}
+.type_list h4{
+    transform: translateY(-320%) translateX(-0%);
+    max-width: 1130px;
+    color: #5fb1de;
+    text-align: center;
+    z-index: 9997;
+    font-size: 1rem;
+}
+.type_list li i{
+    transform: translateY(-320%) translateX(0%);
+    max-width: 1130px;
+    color: #5fb1de;
+    text-align: center;
+    z-index: 9996;
+    font-size: 1rem;
+    padding-bottom: 5px;
+}
+
+/**********************************
+*Q&Aゾーン
+**********************************/
+.cp_qa *, .cp_qa *:after, .cp_qa *:before {
+	font-family: 'FontAwesome', sans-serif;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.cp_qa .cp_actab {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	margin: 0 0 1em 0;
+	color: #ffffff;
+}
+.cp_qa .cp_actab input {
+	position: absolute;
+	opacity: 0;
+}
+/* 質問 */
+.cp_qa .cp_actab label {
+	line-height: 1.6em;
+	position: relative;
+	display: block;
+	margin: 0 0.5em 0.5em 2em;
+	padding: 1em 0 2em 0;
+	cursor: pointer;
+	border-radius: 0.3em;
+	background: #209ddb;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+}
+.cp_qa .cp_actab label:hover{
+	background-color: #afd0e6;
+	color: #3f3f3f;
+	font-weight: bold;
+}
+.cp_qa .cp_actab label span {
+	display: block;
+	padding: 0 2em 1em 2em;
+	border-bottom: 1px solid #ffffff;
+}
+/* --?アイコン */
+.cp_qa .cp_actab label::before {
+	font-size: 2em;
+	position: absolute;
+	z-index: 99;
+	top: 0.5em;
+	left: -1em;
+	padding: 0 0em;
+	content: 'Q';
+	border: 3px solid #ffffff;
+	border-radius: 50%;
+	background: #209ddb;
+	display: inline-block;
+	width: 1.8em;
+	height: 1.8em;
+	line-height: 1.8em;
+}
+/* --▼アイコン */
+.cp_qa .cp_actab label::after {
+	font-size: 1em;
+	font-weight: normal;
+	line-height: 1em;
+	position: absolute;
+	right: 0;
+	bottom: 1em;
+	content: '\25BC';
+	display: inline-block;
+	width: 100%;
+	height: 1em;
+	padding: 0.5em;
+	text-align: right;
+	-webkit-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+/* 答え */
+.cp_qa .cp_actab .cp_actab-content {
+	position: relative;
+	overflow: hidden;
+	max-height: 0;
+	margin: 0 0 0.5em 0;
+	padding: 0 0 0 5em;
+	-webkit-transition: max-height 0.5s ease;
+	        transition: max-height 0.5s ease;
+	color: #ffffff;
+}
+/* --!アイコン */
+.cp_qa .cp_actab .cp_actab-content::before {
+	font-size: 1.5em;
+	position: absolute;
+	z-index: 99;
+	top: calc(50% - 0.9em);
+	left: 2.5em;
+	padding: 0;
+	content: 'A';
+	color: #ffffff;
+	border: 3px solid #ffffff;
+	border-radius: 50%;
+	background: #0072e4;
+	width: 1.8em;
+	height: 1.8em;
+	line-height: 1.8em;
+}
+.cp_qa .cp_actab .cp_actab-content p {
+	margin: 0.5em 0.5em 0.5em 0;
+	padding: 1em 1em 1em 3em;
+      text-align: left;
+	border-radius: 0.3em;
+	background: #0072e4;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+}
+/* 質問を開いた時の仕様 */
+/* --答えの高さ */
+.cp_qa .cp_actab input:checked ~ .cp_actab-content {
+	max-height: 40em;
+}
+/* 質問をクリックした時の▼アイコンの動き */
+.cp_qa .cp_actab input[type=checkbox]:checked + label::after {
+	bottom: 0em;
+	-webkit-transform: rotateX(180deg);
+	transform: rotateX(180deg);
+}
+
+/* ボタン */
+.qa_button{
+	width: 280px;
+	height: 70px;
+	font-size: 1.687rem;
+	background-color: #5fb1de;
+	color: #fff;
+	padding: 16px 0;
+	border: solid 1px #0072e4;
+	margin: 100px auto 280px;
+	box-shadow: 2px 2px 4px #a8a8a8;
+}
+.qa_button i{
+	padding-left: 40px;
+}
+
+.qa_button:hover {
+	background-color: #fff;
+	color: #5fb1de;
+}
+/**********************************
+*フッターゾーン
+**********************************/
+footer{
+	width: 100%;
+	height: 450px;
+	margin: 0;
+}
+.info{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 190px;
+	color: #fff;
+	background-color: #000000;
+}
+.nav_last{
+	height: 260px;
+	display: flex;
+	flex: auto;
+	justify-content: center;
+	background-color: #1F9BD3;
+	color: #fff;
+}
