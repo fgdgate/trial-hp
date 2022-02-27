@@ -197,9 +197,19 @@ width: 100%;
 *PURPOSEゾーン
 **********************************/
 .purpose_list{
-	display: flex;
-	flex-wrap: wrap;
+	width: 1160px;
+	display: inline-block;
+	position: relative;
 	justify-content: flex-start;
+}
+.purpose_list h5{
+	position: absolute;
+	top: -10px;
+	left: 0;
+	font-size: 4rem;
+	color: #fff;
+	opacity: .75;
+
 }
 .purpose_list ul{
 	max-width: 1164px;
@@ -310,7 +320,6 @@ width: 100%;
 	width: 1.8em;
 	height: 1.8em;
 	line-height: 1.8em;
-	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%) !important;
 }
 /* --▼アイコン */
 .cp_qa .cp_actab label::after {
