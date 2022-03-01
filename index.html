@@ -7,6 +7,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Potta+One&display=swap" rel="stylesheet">
       <!-- fontawesome -->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
       <!-- リセットcss -->
@@ -26,6 +30,8 @@
                   <li class="nav-item"><a class="contact_btn" href="contact">CONTACT <span>お問い合わせ</span></a></li>
                   <div class="clear"></div>
             </ul>
+            <div class="menu-btn">
+                  <i class="fa fa-bars" aria-hidden="true"></i>
       </header>
       <main>
             <div class="visual">
@@ -195,50 +201,50 @@
                         <div class="cp_qa">
                               <div class="sankaku_03"></div>
                               <div class="cp_actab">
-                                    <input id="cp_tabfour041" type="checkbox" name="tabs">
-                                    <label for="cp_tabfour041"><span>大体の見積り金額を電話で教えてもらえますか？</span></label>
+                                    <input id="cp_tabfour031" type="checkbox" name="tabs">
+                                    <label for="cp_tabfour031">大体の見積り金額を電話で教えてもらえますか？</label>
                                     <div class="cp_actab-content">
                                     <p>答えテキスト答えテキスト答えテキスト答えテキスト答えテキスト答えテキスト
-                                          答えテキスト答えテキスト答えテキスト答えテキスト答えテキスト答えテキスト答えテキスト答えテキスト答えテキスト
-                                    </p>
+                                          答えテキスト答えテキスト答えテキスト答えテキスト答えテキスト答えテキスト答えテキスト答えテキスト答えテキスト</p>
                                     </div>
                               </div>
                               <div class="cp_actab">
-                                    <input id="cp_tabfour042" type="checkbox" name="tabs">
-                                    <label for="cp_tabfour042"><span>もともと貼ってあるフィルムはいくらで剥がしてもらえますか？</span></label>
+                                    <input id="cp_tabfour032" type="checkbox" name="tabs">
+                                    <label for="cp_tabfour032">もともと貼ってあるフィルムはいくらで剥がしてもらえますか？</label>
                                     <div class="cp_actab-content">
                                     <p>答えテキスト</p>
                                     </div>
                               </div>
                               <div class="cp_actab">
-                                    <input id="cp_tabfour043" type="checkbox" name="tabs">
-                                    <label for="cp_tabfour043"><span>途中でキャンセルもしくはフィルムの変更は可能ですか？</span></label>
+                                    <input id="cp_tabfour033" type="checkbox" name="tabs">
+                                    <label for="cp_tabfour033">途中でキャンセルもしくはフィルムの変更は可能ですか？</label>
                                     <div class="cp_actab-content">
                                     <p>答えテキスト</p>
                                     </div>
                               </div>
                               <div class="cp_actab">
-                                    <input id="cp_tabfour044" type="checkbox" name="tabs">
-                                    <label for="cp_tabfour044"><span>土日祝日でも施工していますか？</span></label>
+                                    <input id="cp_tabfour034" type="checkbox" name="tabs">
+                                    <label for="cp_tabfour034">土日祝日でも施工していますか？</label>
                                     <div class="cp_actab-content">
                                     <p>答えテキスト</p>
                                     </div>
                               </div>
                               <div class="cp_actab">
-                                    <input id="cp_tabfour045" type="checkbox" name="tabs">
-                                    <label for="cp_tabfour045"><span>引越後でもガラスフィルムの施工は可能ですか？</span></label>
+                                    <input id="cp_tabfour035" type="checkbox" name="tabs">
+                                    <label for="cp_tabfour035">引越後でもガラスフィルムの施工は可能ですか？</label>
                                     <div class="cp_actab-content">
                                     <p>答えテキスト</p>
                                     </div>
                               </div>
                               <div class="cp_actab">
-                                    <input id="cp_tabfour046" type="checkbox" name="tabs">
-                                    <label for="cp_tabfour046"><span>現物サンプルを見たい時にはどうすれば良いですか？</span></label>
+                                    <input id="cp_tabfour036" type="checkbox" name="tabs">
+                                    <label for="cp_tabfour036">現物サンプルを見たい時にはどうすれば良いですか？</label>
                                     <div class="cp_actab-content">
                                     <p>答えテキスト</p>
                                     </div>
                               </div>
                         </div>
+
                         <div class="qa_button">
                               <input type="submit" value="Q&A"><i class="fas fa-angle-double-right"></i>
                         </div>
@@ -249,7 +255,7 @@
                         <div class="menu_left">
                             <h6>お急ぎの方はお電話から</h6>
                             <ul class="foot_left">
-                                <p><i class="fas fa-phone-square-alt"></i>000-0000-0000</p>
+                                <p><i class="fas fa-phone-square-alt"></i><span>000-0000-0000</span></p>
                                 <li>受付：9時～18時</li>
                             </ul>
                         </div>
@@ -284,7 +290,12 @@
                         autoplay: true,
                         speed:800,
                   });
+
+                  $('.menu-btn').on('click', function(){
+                  $('#nav ul').toggleClass('is-active');
+                  });
             });
+                  
       </script>
 </body>
 </html>
