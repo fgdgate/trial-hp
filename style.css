@@ -314,6 +314,9 @@ font-family: 'NotoSerifCJKjp';
 	top: -10px;
 	left: 5px;
 }
+.purpose_list img:hover{
+	opacity: .5;
+}
 
 /**********************************
 *TYPEゾーン
