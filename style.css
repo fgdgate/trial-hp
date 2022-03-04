@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 html {
-  font-size: 100%;
-  background: rgb(244 246 246);
+ 	background: rgb(244 246 246);
+	 z-index: -2;
 }
 a {
       text-decoration: none;
@@ -29,7 +29,7 @@ li {
 }
 
 body{
-	-webkit-text-size-adjust: 100%;
+	
 	font-family: 'NotoSerifCJKjp', 'Kaisei Opti', serif;
 	font-family: 'Potta One', cursive;
 }
@@ -250,7 +250,7 @@ font-family: 'NotoSerifCJKjp';
 	text-align: center;
 	font-size: 2.5rem;
 	font-weight: bold;
-	margin: 0 auto;
+	margin: 140px auto 0;
 }
 .purpose_title p{
 	font-size: 0.812rem;
@@ -278,9 +278,9 @@ font-family: 'NotoSerifCJKjp';
 	border-right: 138px solid transparent;
 	border-bottom: 174px solid transparent;
 	border-left: 248px solid #5fb1de;
-	top: -40px;
+	top: -50px;
 	left: -40px;
-	opacity: .2;
+	opacity: .1;
 	z-index: -1;
   }
 .purpose_list li{
@@ -312,7 +312,7 @@ font-family: 'NotoSerifCJKjp';
 	color: #fff;
 	opacity: .75;
 	top: -10px;
-	left: 0;
+	left: 5px;
 }
 
 /**********************************
@@ -352,21 +352,17 @@ font-family: 'NotoSerifCJKjp';
 	border-right: 138px solid transparent;
 	border-bottom: 174px solid transparent;
 	border-left: 248px solid #5fb1de;
-	top: -40px;
+	top: -50px;
 	left: -40px;
-	opacity: .2;
+	opacity: .1;
 	z-index: -1;
 }
 .type_list li{
-	width: 22%;
-	height: 20vh;
-	margin: 0 auto 60px;
-	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%) !important;
+	display: flex;
+	/* height: auto; */
+	margin: 0 auto;
+	filter: drop-shadow(0 2px 5px 0) ;
 	border-radius: 10px;
-}
-.type_list li img{
-	height: 240px;
-	/* padding-left: 10px; */
 }
 .type_list h4{
 	transform: translateY(-500%) translateX(-0%);
@@ -384,6 +380,16 @@ font-family: 'NotoSerifCJKjp';
 	/* z-index: 9996; */
 	font-size: 2rem;
 	/* padding-bottom: 5px; */
+}
+.type_list img:hover{
+	border-radius: 50%;
+	color: white;
+}
+.type_list a{
+	width: auto;
+	height: 22vh;
+	margin-bottom: 60px;
+	padding: 0;
 }
 
 /**********************************
@@ -404,6 +410,9 @@ font-family: 'NotoSerifCJKjp';
 }
 
 .sankaku_03{
+	position: relative;
+}
+.sankaku_03{
 	position: absolute;
 	width: 0;
 	height: 0;
@@ -411,10 +420,10 @@ font-family: 'NotoSerifCJKjp';
 	border-right: 138px solid transparent;
 	border-bottom: 174px solid transparent;
 	border-left: 248px solid #5fb1de;
-	top: 2130px;
-	left: -50px;
-	opacity: .2;
-	z-index: -1;
+	/* bottom: -230px; */
+	left: -60px;
+	opacity: .1;
+	z-index: 0;
 }
 .cp_qa *, .cp_qa *:after, .cp_qa *:before {
 	-webkit-box-sizing: border-box;
@@ -424,7 +433,8 @@ font-family: 'NotoSerifCJKjp';
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	margin: 0 0 1em 0;
+	margin: 0;
+	padding-top: 40px;
 	color: #1b2538;
 }
 .cp_qa .cp_actab input {
@@ -433,35 +443,34 @@ font-family: 'NotoSerifCJKjp';
 }
 /* 質問 */
 .cp_qa .cp_actab label {
-	font-size: 1.2rem;
 	font-weight: bold;
 	line-height: 1.6em;
 	position: relative;
 	display: block;
-	margin: 0 0 10px;
-	padding: 1.4em 2em 1.4em 4em;
+	margin: 0.5em 0;
+	padding: 1.5em 2.5em 1.5em 3em;
 	cursor: pointer;
 	text-indent: 1em;
+	border-radius: 0.5em;
 	background: #fff;
 }
 .cp_qa .cp_actab label::before {
-	position: absolute;
-	/* font-family: serif; */
-	font-size: 1.5em;
-	margin-left: -2em;
+	font-family: serif;
+	font-size: 2em;
+	margin-left: -1em;
 	padding-right: 0.5em;
-	content: 'Q';
 	color: #5fb1de;
+	content: 'Q';
 }
 .cp_qa .cp_actab label:hover {
 	transition: all 0.3s;
-	color: #209ddb;
+	color: #5fb1de;
 }
 /* --質問の＋アイコン */
 .cp_qa .cp_actab label::after {
 	font-size: 1.7em;
 	font-weight: bold;
-	line-height: 2em;
+	line-height: 3em;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -481,6 +490,8 @@ font-family: 'NotoSerifCJKjp';
 	-webkit-transition: max-height 0.2s;
 	        transition: max-height 0.2s;
 	border-radius: 0 0 0.5em 0.5em;
+	background-color: #f1f0f0;
+	border-color: #5fb1de;
 }
 .cp_qa .cp_actab .cp_actab-content::before {
 	font-family: serif;
@@ -492,7 +503,6 @@ font-family: 'NotoSerifCJKjp';
 }
 .cp_qa .cp_actab .cp_actab-content p {
 	margin: 1em 1em 1em 0;
-	text-align: left;
 }
 /* 質問を開いた時の仕様 */
 /* --答えの高さ */
@@ -569,13 +579,13 @@ footer{
 	text-align: center;
 	font-size: 1.125rem;
 	border-bottom: 1px solid #5fb1de;
-	margin: 0 auto 22px;
+	margin: 0 auto 10px;
 }
 .foot_left p{
 	margin-right: 40px;
 }
 .foot_left span{
-	font-size: 3rem;
+	font-size: 2.5rem;
 	font-family: a-otf-ud-shin-go-pr6n, sans-serif;
 	font-style: normal;
 	font-weight: bold;
@@ -610,6 +620,9 @@ footer{
 .foot_right li{
 	font-size: 1.562rem;
 }
+/* .foot_right p{
+	padding-top: 30px;
+} */
 .foot_right{
 	margin-top: 20px;
 }
