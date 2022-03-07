@@ -37,9 +37,9 @@
             <div class="visual">
                   <!--スライダー予定  -->
                   <div class="slider">
-                        <div><img class="visual_img01" src="trial_img\main-visual.png" alt=""></div>
-                        <div><img class="visual_img02" src="trial_img\AdobeStock_416419291.jpeg" alt=""></div>
-                        <div><img class="visual_img03" src="trial_img\AdobeStock_176378289.jpeg" alt=""></div>
+                        <div class="visual_img01"><img src="trial_img\main-visual.png" alt=""></div>
+                        <div class="visual_img02"><img src="trial_img\AdobeStock_416419291.jpeg" alt=""></div>
+                        <div class="visual_img03"><img src="trial_img\AdobeStock_176378289.jpeg" alt=""></div>
                   </div>
                   <div class="visual_text">
                         <p>ガラスフィルム<span>で</span></p>
@@ -53,7 +53,7 @@
                   <!-- PURPOSEゾーン -->
                   <div id="purpose" class="wrapper">
                         <div class="purpose_title">
-                              <h2>PURPOSE</h2>
+                              <h2><span>P</span>URPOSE</h2>
                               <p>目的別フィルム</p>
                         </div>
                         
@@ -71,7 +71,9 @@
                               </li>
                               <li>
                                     <a href="">
-                                          <img src="trial_img\purpose-20.png" alt="紫外線対策">
+                                          <div class="list_img">
+                                                <img src="trial_img\purpose-20.png" alt="紫外線対策">
+                                          </div>
                                           <h3 class="content-title">紫外線対策</h3>
                                           <p>紫外線を99％カット！<br>（お肌と家具の日焼け防止）</p>
                                           <span>MORE <i class="fas fa-arrow-alt-circle-right"></i></span>
@@ -79,7 +81,9 @@
                               </li>
                               <li>
                                     <a href="">
-                                          <img src="trial_img\purpose-22.png" alt="目隠し効果">
+                                          <div class="list_img">
+                                                <img src="trial_img\purpose-22.png" alt="目隠し効果">
+                                          </div>
                                           <h3 class="content-title">目隠し効果</h3>
                                           <p> 開放感を損なわない室内<br>（プライバシー保護）</p>
                                           <span>MORE <i class="fas fa-arrow-alt-circle-right"></i></span>
@@ -87,15 +91,19 @@
                               </li>
                               <li>
                                     <a href="">
-                                          <img src="trial_img\purpose-24.png" alt="災害対策">
+                                          <div class="list_img">
+                                                <img src="trial_img\purpose-24.png" alt="災害対策">
+                                          </div>
                                           <h3 class="content-title">遮断・省エネ</h3>
-                                          <p> 窓ガラスの飛散防止 </p>
+                                          <p> 窓ガラスの飛散防止 </p><br>
                                           <span>MORE<i class="fas fa-arrow-alt-circle-right"></i></span>
                                     </a>
                               </li>
                               <li>
                                     <a href="">
-                                          <img src="trial_img\purpose-26.png" alt="防犯対策">
+                                          <div class="list_img">
+                                                <img src="trial_img\purpose-26.png" alt="防犯対策">
+                                          </div>
                                           <h3 class="content-title">防犯対策</h3>
                                           <p>防犯性能の高い建物部品目録<br>（セキュリティ強化）</p>
                                           <span>MORE <i class="fas fa-arrow-alt-circle-right"></i></span>
@@ -103,7 +111,9 @@
                                     </li>
                               <li>
                                     <a href="">
-                                          <img src="trial_img\purpose-28.png" alt="ガラスの装飾">
+                                          <div class="list_img">
+                                                <img src="trial_img\purpose-28.png" alt="ガラスの装飾">
+                                          </div>
                                           <h3 class="content-title">遮断・省エネ</h3>
                                           <p>高い透明度のデザイン性<br>（手軽な価格でお洒落に！）</p>
                                           <span>MORE <i class="fas fa-arrow-alt-circle-right"></i></span>
@@ -111,7 +121,9 @@
                               </li>
                               <li>
                                     <a href="">
-                                          <img src="trial_img\purpose-30.png" alt="冬季の断熱">
+                                          <div class="list_img">
+                                                <img src="trial_img\purpose-30.png" alt="冬季の断熱">
+                                          </div>
                                           <h3 class="content-title">冬季の断熱</h3>
                                           <p>冬の窓際の寒さにお困りの方<br>（暖房効率がアップ）</p>
                                           <span>MORE <i class="fas fa-arrow-alt-circle-right"></i></span>
@@ -124,7 +136,7 @@
                   <!-- TYPEゾーン -->
                   <div id="type" class="wrapper">
                         <div class="type_title">
-                              <h2 >TYPER</h2>
+                              <h2 ><span>T</span>YPER</h2>
                               <p>フィルムの種類</p>
                               <div class="type_dis">
                                     テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
@@ -195,7 +207,7 @@
                   <!-- Q&Aゾーン -->
                   <div id="qa" class="wrapper">
                         <div class="qa_title">
-                              <h2>Q&A</h2>
+                              <h2>Q<span>&</span>A</h2>
                               <p>よくある質問</p>
                         </div>
                         <div class="cp_qa">
@@ -291,6 +303,19 @@
                         infinite: true,
                         autoplay: true,
                         speed:800,
+                        responsive: [
+                  {
+                        breakpoint: 768,
+                        settings:'unslick'
+                  },
+                  {
+                        breakpoint: 480,
+                        settings:'unslick'
+                  }
+                  ]
+                  });
+                  $(window).on('resize orientationchange', function() {
+                  $('.js-slider').slick('resize');
                   });
 
                   $('.menu-btn').on('click', function(){

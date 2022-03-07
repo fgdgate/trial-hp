@@ -175,14 +175,14 @@ font-family: 'NotoSerifCJKjp';
 	position: relative;
 	margin-bottom: 100px;
 	font-family: 'NotoSerifCJKjp';
-	
+	object-fit: cover;
 }
 .visual::after{
 	position: absolute;
 	width: 100%;
 	height: 60vh;
 	content: "";
-	top: auto;
+	top: 0;
 	right: 0;
 	left: 0;
 	background-color: black;
@@ -192,7 +192,6 @@ font-family: 'NotoSerifCJKjp';
 .slider{
 	max-width: 100%;
 	height: 100%;
-	object-fit: cover;
 }
 .slick-track{
 	height: 60vh;
@@ -206,14 +205,14 @@ font-family: 'NotoSerifCJKjp';
 
 .visual_text{
 	position: absolute;
-	top: 40%;
+	top: 50%;
 	left: 50%;
 	transform: translateY(-50%) translateX(-50%);
 	max-width: 1130px;
 	color: #5fb1de;
 	font-size: 3.5rem;
 	font-family: 'NotoSerifCJKjp';
-	font-weight: 400;
+	font-weight: bold;
 	line-height: 1.5;
 	text-align: center;
 	z-index: 9999;
@@ -231,6 +230,44 @@ font-family: 'NotoSerifCJKjp';
 	color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+	.visual{
+		width: 100%;
+		height: 40vh;
+		
+	}
+	.visual::after{
+		width: 100%;
+		height: 44vh;
+	}
+	.slider{
+		width: 100%;
+	}
+	.visual_text{
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		color: #5fb1de;
+		font-size: 2rem;
+		font-family: 'NotoSerifCJKjp';
+		font-weight: bold;
+		line-height: 1.5;
+		text-align: center;
+		z-index: 9999;
+	
+	}
+	.visual_text p{
+		text-align: center;
+	}
+	.visual_text span{
+		font-size: 1.5rem;
+		color: #fff;
+	}
+	.visual_dis{
+		font-size: 2rem;
+		color: #fff;
+	}
+}
 /**********************************
 *共通ゾーン
 **********************************/
@@ -241,7 +278,11 @@ font-family: 'NotoSerifCJKjp';
 	font-family: 'NotoSerifCJKjp'
 }
 
-
+@media screen and (max-width: 768px) {
+	#main_inner{
+		width: 100%;
+	}
+}
 
 /**********************************
 *PURPOSEゾーン
@@ -252,21 +293,15 @@ font-family: 'NotoSerifCJKjp';
 	font-weight: bold;
 	margin: 140px auto 0;
 }
+.purpose_title h2 span{
+	color: #1F9BD3;
+	font-size: 3rem;
+}
 .purpose_title p{
 	font-size: 0.812rem;
 	margin: 10px 46% 50px;
 	padding-bottom: 40px;
 	border-bottom: solid #5fb1de 2px;
-	text-align: center;
-}
-
-
-.purpose_list{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	position: relative;
-	margin: 0 auto;
 	text-align: center;
 }
 
@@ -283,10 +318,34 @@ font-family: 'NotoSerifCJKjp';
 	opacity: .1;
 	z-index: -1;
   }
+
+.purpose_list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	counter-reset: number 0;
+}
 .purpose_list li{
 	position: relative;
 	width: 23.26%;
 	margin: 0 0 40px 20px;
+}
+.purpose_list li::before{
+	position: absolute;
+	counter-increment: number 1;
+	content:counter(number,decimal-leading-zero);
+	font-size: 4rem; 
+	font-family: fantasy;
+	color: #fff;
+	opacity: .75;
+	top: -3%;
+	left: 3%;
+}
+.purpose_list img:hover{
+	opacity: .5;
 }
 .purpose_list a{
 	color: #000;
@@ -299,29 +358,14 @@ font-family: 'NotoSerifCJKjp';
 	font-size: 0.875rem;
 	margin-bottom: 10px;
 }
-.purpose_list {
-	position: relative;
-	counter-reset: number 0;
-}
-.purpose_list li::before{
-	position: absolute;
-	counter-increment: number 1;
-	content:counter(number,decimal-leading-zero);
-	font-size: 4rem; 
-	font-family: fantasy;
-	color: #fff;
-	opacity: .75;
-	top: -10px;
-	left: 5px;
-}
-.purpose_list img:hover{
-	opacity: .5;
+.purpose_list i{
+	color: #5fb1de;
 }
 
 @media screen and (max-width: 768px) {
 	#purpose{
 		width: 95%;
-		margin: 0 auto 60px;
+		margin: 0 auto;
 	}
 	.purpose_title h2{
 		font-size: 2rem;
@@ -346,14 +390,24 @@ font-family: 'NotoSerifCJKjp';
 		margin-bottom: 5px;
 	}
 	.purpose_list li::before{
-		top: -10px;
-		left: 60px;
+		top: -3%;
+		left: 32%;
 	}
 	.purpose_list img:hover{
 		display: none;
 	}
 }
 
+@media screen and (max-width: 600px){
+	.purpose_list li::before{
+		left: 26%;
+}
+}
+@media screen and (max-width: 480px){
+	.purpose_list li::before{
+		left: 22%;
+	}
+}
 /**********************************
 *TYPEゾーン
 **********************************/
@@ -362,6 +416,10 @@ font-family: 'NotoSerifCJKjp';
 	font-size: 2.5rem;
 	font-weight: bold;
 	margin: 0 auto;
+}
+.type_title h2 span{
+	color: #1F9BD3;
+	font-size: 3rem;
 }
 .type_title p{
 	font-size: 0.812rem;
@@ -487,6 +545,10 @@ font-family: 'NotoSerifCJKjp';
 	font-size: 2.5rem;
 	font-weight: bold;
 	margin: 0 auto;
+}
+.qa_title h2 span{
+	color: #1F9BD3;
+	font-size: 1.5rem;
 }
 .qa_title p{
 	font-size: 0.812rem;
