@@ -19,27 +19,29 @@
       <title>TRIAL-SITE</title>
 </head>
 <body>
+      <div class="menu-btn">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
       <header id="nav">
             <ul>
-                  <li class="nav-item"><a href="#home">HOME <span>ホーム</span></a></li>
+                  <li class="nav-item"><a href="#">HOME <span>ホーム</span></a></li>
                   <li class="nav-item"><a href="#purpose">PURPOSE <span>目的別フィルム</span></a></li>
-                  <li class="nav-item"><a href="type">TYPE <span>フィルムの種類</span></a></li>
-                  <li class="nav-item"><a href="#price">PRICE <span>料金表</span></a></li>
-                  <li class="nav-item"><a href="#q&a">Q&A <span>よくある質問</span></a></li>
-                  <li class="nav-item"><a href="#shop">SHOP <span>店舗情報</span></a></li>
-                  <li class="nav-item"><a class="contact_btn" href="contact">CONTACT <span>お問い合わせ</span></a></li>
+                  <li class="nav-item"><a href="#type">TYPE <span>フィルムの種類</span></a></li>
+                  <li class="nav-item"><a href="#">PRICE <span>料金表</span></a></li>
+                  <li class="nav-item"><a href="#qa">Q&A <span>よくある質問</span></a></li>
+                  <li class="nav-item"><a href="#">SHOP <span>店舗情報</span></a></li>
+                  <li class="nav-item"><a class="contact_btn" href="#">CONTACT <span>お問い合わせ</span></a></li>
                   <div class="clear"></div>
             </ul>
-            <div class="menu-btn">
-                  <i class="fa fa-bars" aria-hidden="true"></i>
+            
       </header>
       <main>
             <div class="visual">
                   <!--スライダー予定  -->
                   <div class="slider">
-                        <div class="visual_img01"><img src="trial_img\main-visual.png" alt=""></div>
-                        <div class="visual_img02"><img src="trial_img\AdobeStock_416419291.jpeg" alt=""></div>
-                        <div class="visual_img03"><img src="trial_img\AdobeStock_176378289.jpeg" alt=""></div>
+                        <div class="visual_img01"><img src="trial_img\main-visual.png" alt="" width="100%" height="800" style="object-fit: cover;"></div>
+                        <div class="visual_img02"><img src="trial_img\AdobeStock_416419291.jpeg" alt="" width="100%" height="800"></div>
+                        <div class="visual_img03"><img src="trial_img\AdobeStock_176378289.jpeg" alt="" width="100%" height="800"></div>
                   </div>
                   <div class="visual_text">
                         <p>ガラスフィルム<span>で</span></p>
@@ -297,29 +299,47 @@
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
       <script>
             $(document).ready(function(){
+                  $('.menu-btn').on('click', function(){
+                  $('#nav ul').toggleClass('is-active');
+                  });
+                  $('nav-item a[href]').on('click', function(event) {
+                  $('#nav ul').trigger('click');
+                  });
+
                   $('.slider').slick({
                         arrows: false,
                         dots: true,
                         infinite: true,
                         autoplay: true,
                         speed:800,
-                        responsive: [
-                  {
+                        responsive: [{
+
                         breakpoint: 768,
-                        settings:'unslick'
-                  },
-                  {
+                        settings: {
+                        slidesToShow: 1,
+                        dots: false,
+                        }
+
+                        }, {
+
+                        breakpoint: 600,
+                        settings: {
+                        slidesToShow: 1,
+                        dots: false
+                        }
+
+                        }, {
+
                         breakpoint: 480,
-                        settings:'unslick'
-                  }
-                  ]
+                        settings: {
+                        slidesToShow: 1,
+                        dots: false
+                        }
+
+                        }]
                   });
                   $(window).on('resize orientationchange', function() {
                   $('.js-slider').slick('resize');
-                  });
-
-                  $('.menu-btn').on('click', function(){
-                  $('#nav ul').toggleClass('is-active');
                   });
             });
                   

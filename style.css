@@ -95,12 +95,14 @@ font-family: 'NotoSerifCJKjp';
 }
 
 @media screen and (max-width: 768px) {
-		#nav {
-			width: 100%;
-		}
-		#nav ul{
-			display: none;
-		}
+#nav {
+	width: 100%;
+}
+#nav ul{
+	display: none;
+}
+
+
 /*----------------------------
 * メニュー開閉ボタン
 *----------------------------*/
@@ -114,8 +116,11 @@ font-family: 'NotoSerifCJKjp';
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #333;
+	background: #1F9BD3;
 	color: #fff;
+	border-radius: 5px;
+	border: solid 2px #afd0e6;
+	z-index: 9999;
     }
     
     /*----------------------------
@@ -133,6 +138,7 @@ font-family: 'NotoSerifCJKjp';
 	align-items: center;
 	justify-content: center;
 	background: #555;
+	z-index: 9998;
     }
     .nav-item{
 	width: 100%;
@@ -142,6 +148,18 @@ font-family: 'NotoSerifCJKjp';
 	color: #fff;
 	box-sizing: border-box;
     }
+    #nav li a:only-of-type{
+	    border: none;
+	    color: #fff;
+	    font-size: 1.25rem;
+	    font-weight: 500;
+    }
+    #nav li:first-of-type :hover{
+	    display: none;
+    }
+    #nav .contact_btn:hover{
+	    display: none;
+    }
     
     /*----------------------------
     * アニメーション部分
@@ -149,17 +167,14 @@ font-family: 'NotoSerifCJKjp';
     
     /* アニメーション前のメニューの状態 */
     #nav ul{
-	pointer-events: none;
-	opacity: 0;
-	transform-origin: center;
-	transform: scale(.5);
-	transition: all .3s ease;
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity .3s linear;
     }
     /* アニメーション後のメニューの状態 */
     #nav ul.is-active{
-	pointer-events: auto;
-	opacity: 1;
-	transform: scale(1.0);
+		pointer-events: auto;
+		opacity: 1;
     }
 }    
 
@@ -170,17 +185,16 @@ font-family: 'NotoSerifCJKjp';
 **********************************/
 .visual{
 	max-width: 100%;
-	height: 60vh;
+	height: 70vh;
 	display: flex;
 	position: relative;
 	margin-bottom: 100px;
 	font-family: 'NotoSerifCJKjp';
-	object-fit: cover;
 }
 .visual::after{
 	position: absolute;
 	width: 100%;
-	height: 60vh;
+	height: 800px;
 	content: "";
 	top: 0;
 	right: 0;
@@ -190,15 +204,13 @@ font-family: 'NotoSerifCJKjp';
 	opacity: 0.5;
 }
 .slider{
-	max-width: 100%;
+	width: 100%;
 	height: 100%;
+	visibility: hidden;
 }
-.slick-track{
+/* .slick-track{
 	height: 60vh;
-}
-.slider {
-      visibility: hidden;
-}
+} */
 .slider.slick-initialized {
       visibility: visible;
 }
@@ -215,7 +227,7 @@ font-family: 'NotoSerifCJKjp';
 	font-weight: bold;
 	line-height: 1.5;
 	text-align: center;
-	z-index: 9999;
+	z-index: 9997;
 
 }
 .visual_text p{
@@ -233,15 +245,19 @@ font-family: 'NotoSerifCJKjp';
 @media screen and (max-width: 768px) {
 	.visual{
 		width: 100%;
-		height: 40vh;
-		
+		height: auto;
+		display: flex;
+		position: relative;
+		margin-bottom: 100px;
+		font-family: 'NotoSerifCJKjp';
 	}
 	.visual::after{
 		width: 100%;
-		height: 44vh;
+		height: 50vh;
 	}
-	.slider{
-		width: 100%;
+	.slick-track{
+		height: 50vh;
+		
 	}
 	.visual_text{
 		top: 50%;
@@ -253,7 +269,7 @@ font-family: 'NotoSerifCJKjp';
 		font-weight: bold;
 		line-height: 1.5;
 		text-align: center;
-		z-index: 9999;
+		z-index: 9997;
 	
 	}
 	.visual_text p{
