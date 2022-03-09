@@ -39,9 +39,9 @@
             <div class="visual">
                   <!--スライダー予定  -->
                   <div class="slider">
-                        <div class="visual_img01"><img src="trial_img\main-visual.png" alt="" width="100%" height="600"></div>
-                        <div class="visual_img02"><img src="trial_img\AdobeStock_416419291.jpeg" alt="" width="100%" height="600"></div>
-                        <div class="visual_img03"><img src="trial_img\AdobeStock_176378289.jpeg" alt="" width="100%" height="600"></div>
+                        <div><img src="trial_img\main-visual.png" alt="" width="100%" height="600"></div>
+                        <div><img src="trial_img\AdobeStock_416419291.jpeg" alt="" width="100%" height="600"></div>
+                        <div><img src="trial_img\AdobeStock_176378289.jpeg" alt="" width="100%" height="600"></div>
                   </div>
                   <div class="visual_text">
                         <p>ガラスフィルム<span>で</span></p>
@@ -299,19 +299,13 @@
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
       <script>
             $(document).ready(function(){
-                  $('.menu-btn').on('click', function(){
-                  $('#nav ul').toggleClass('is-active');
-                  });
-                  $('nav-item a[href]').on('click', function(event) {
-                  $('#nav ul').trigger('click');
-                  });
-
                   $('.slider').slick({
                         arrows: false,
                         dots: true,
                         infinite: true,
                         autoplay: true,
                         speed:800,
+
                         responsive: [{
 
                         breakpoint: 768,
@@ -340,6 +334,9 @@
                   });
                   $(window).on('resize orientationchange', function() {
                   $('.js-slider').slick('resize');
+                  });
+                  $('.menu-btn').on('click', function(){
+                  $('#nav ul').toggleClass('is-active');
                   });
             });
                   
