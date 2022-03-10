@@ -301,13 +301,14 @@
       <script>
             $(document).ready(function(){
                   $('.slider').slick({
-                        lazyLoad: 'ondemand',
-                        centerMode: true,
+                        lazyLoad: false,
+                        // centerMode: true, 横が見切れる
                         arrows: false,
                         dots: true,
                         infinite: true,
                         autoplay: true,
-                        speed:900,
+                        speed:800,
+                        slidesToShow: 1,
 
                         responsive: [{
 
@@ -335,9 +336,9 @@
 
                         }]
                   });
-                  $(window).on('resize orientationchange', function() {
-                  $('.js-slider').slick('resize');
-                  });
+                  // $(window).on('resize orientationchange', function() {
+                  // $('.js-slider').slick('resize');
+                  // });
                   $('.menu-btn').on('click', function(){
                   $('#nav ul').toggleClass('is-active');
                   });
