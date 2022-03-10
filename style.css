@@ -200,7 +200,7 @@ font-family: 'NotoSerifCJKjp';
 	top: 0;
 	right: 0;
 	left: 0;
-	background-color: black;
+	background-color: rgb(99, 99, 99);
 	margin: 0;
 	opacity: 0.5;
 	object-fit: cover;
