@@ -24,13 +24,13 @@
       </div>
       <header id="nav">
             <ul>
-                  <li class="nav-item"><a href="#">HOME <span>ホーム</span></a></li>
+                  <li class="nav-item"><a href="">HOME <span>ホーム</span></a></li>
                   <li class="nav-item"><a href="#purpose">PURPOSE <span>目的別フィルム</span></a></li>
                   <li class="nav-item"><a href="#type">TYPE <span>フィルムの種類</span></a></li>
                   <li class="nav-item"><a href="#">PRICE <span>料金表</span></a></li>
                   <li class="nav-item"><a href="#qa">Q&A <span>よくある質問</span></a></li>
                   <li class="nav-item"><a href="#">SHOP <span>店舗情報</span></a></li>
-                  <li class="nav-item"><a class="contact_btn" href="#">CONTACT <span>お問い合わせ</span></a></li>
+                  <li class="nav-item"><a class="contact_btn" href="">CONTACT <span>お問い合わせ</span></a></li>
                   <div class="clear"></div>
             </ul>
             
@@ -284,13 +284,13 @@
                         </div>
                   </div>
                   <ul class="nav_last">
-                        <li><a href="">ホーム</a></li>
-                        <li><a href="">目的別フィルム</a></li>
-                        <li><a href="">フィルムの種類</a></li>
-                        <li><a href="">料金表</a></li>
-                        <li><a href="">よくある質問</a></li>
-                        <li><a href="">店舗情報</a></li>
-                        <li><a href="">お問い合わせ</a></li>
+                        <li><a href="http://localhost/trial-site/">ホーム</a></li>
+                        <li><a href="#purpose">目的別フィルム</a></li>
+                        <li><a href="#type">フィルムの種類</a></li>
+                        <li><a href="http://localhost/trial-site/">料金表</a></li>
+                        <li><a href="#qa">よくある質問</a></li>
+                        <li><a href="http://localhost/trial-site/">店舗情報</a></li>
+                        <li><a href="http://localhost/trial-site/">お問い合わせ</a></li>
                   </ul>
                   <small class="cmark">&copy; 2022 Sample@D.GATE</small>
             </footer>
@@ -342,10 +342,16 @@
                   // $(window).on('resize orientationchange', function() {
                   // $('.js-slider').slick('resize');
                   // });
+                  $('a[href^="#"]').on('click', function() {
+                  $('.menu-btn').click(); // .menuをクリックした時と同じ処理
+                  return true; //a要素のリンク先移動防ぐには"false"
+                  });
                   $('.menu-btn').on('click', function(){
                   $('#nav ul').toggleClass('is-active');
                   });
+                  
             });
+
             //スクロールした際の動きを関数でまとめる
             function PageTopAnime() {
 
